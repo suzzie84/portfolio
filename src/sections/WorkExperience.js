@@ -51,7 +51,7 @@ const WorkExperience = () => {
         justifyContent: "center",
         background: `linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3)), url(${home_bg}) center center fixed`,
         backgroundSize: "cover",
-        padding: "10px 5%",
+        padding: "10px ",
         position: "relative",
       }}
     >
@@ -81,7 +81,6 @@ const WorkExperience = () => {
                   backdropFilter: "blur(10px)",
                   backgroundColor: "rgba(255, 255, 255, 0.1)",
                   borderRadius: "15px",
-                  padding: "20px",
                   marginBottom: "20px",
                   border: "1px solid rgba(255, 255, 255, 0.2)",
                   boxShadow: "0px 4px 12px rgba(255, 255, 255, 0.1)",

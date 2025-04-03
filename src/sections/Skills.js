@@ -30,7 +30,6 @@ const skills = {
   },
 };
 
-// Animation variant for bubble effect
 const popInVariant = {
   hidden: { scale: 0, opacity: 0 },
   visible: (i) => ({
@@ -62,7 +61,6 @@ const Skills = () => {
         padding: "20px 20px 50px 20px",
       }}
     >
-      {/* Section Title */}
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
         animate={isInView ? { opacity: 1, scale: 1 } : {}}
@@ -83,7 +81,6 @@ const Skills = () => {
         </Typography>
       </motion.div>
 
-      {/* Skills Grid */}
       <Grid container spacing={3} justifyContent="center">
         {Object.entries(skills).map(([category, data], index) => (
           <Grid item xs={12} sm={6} md={4} key={index}>
@@ -107,7 +104,6 @@ const Skills = () => {
                   },
                 }}
               >
-                {/* Category Title */}
                 <Typography
                   variant="h6"
                   sx={{
@@ -121,7 +117,6 @@ const Skills = () => {
                   {category}
                 </Typography>
 
-                {/* Category Description */}
                 <Typography
                   variant="body2"
                   sx={{
@@ -134,7 +129,6 @@ const Skills = () => {
                   {data.description}
                 </Typography>
 
-                {/* Skill Items */}
                 <Box
                   sx={{
                     display: "flex",

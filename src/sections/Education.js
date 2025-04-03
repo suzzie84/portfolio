@@ -74,7 +74,7 @@ const Education = () => {
 
       <Timeline position="alternate">
         {educationData.map((edu, index) => {
-          const isLeft = index % 2 === 0; // Left-side cards animate from left
+          const isLeft = index % 2 === 0; 
           return (
             <TimelineItem key={index}>
               <TimelineSeparator>

@@ -27,7 +27,6 @@ const Contact = () => {
     arrows: false,
   };
 
-  // State to track if section is in view
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
 
@@ -38,11 +37,11 @@ const Contact = () => {
           if (entry.isIntersecting) {
             setIsVisible(true);
           } else {
-            setIsVisible(false); // Reset animation when out of view
+            setIsVisible(false);
           }
         });
       },
-      { threshold: 0.2 } // Trigger when 30% of the section is visible
+      { threshold: 0.2 } 
     );
 
     if (sectionRef.current) {
@@ -72,7 +71,6 @@ const Contact = () => {
         padding: "0px 0px",
       }}
     >
-      {/* Section Title with Slide-Up Animation */}
       <Typography
         variant="h4"
         sx={{
@@ -83,7 +81,7 @@ const Contact = () => {
           letterSpacing: 2,
           fontSize: "2.5rem",
           opacity: isVisible ? 1 : 0,
-          transform: isVisible ? "translateY(0)" : "translateY(50px)", // Slide up from bottom
+          transform: isVisible ? "translateY(0)" : "translateY(50px)", 
           transition: "opacity 0.8s ease-out, transform 0.8s ease-out",
         }}
       >
@@ -104,7 +102,7 @@ const Contact = () => {
           color: "#fff",
           alignItems: "center",
           opacity: isVisible ? 1 : 0,
-          transform: isVisible ? "translateY(0)" : "translateY(50px)", // Slide up from bottom
+          transform: isVisible ? "translateY(0)" : "translateY(50px)", 
           transition: "opacity 0.8s ease-out, transform 0.8s ease-out",
         }}
       >
@@ -181,7 +179,6 @@ const Contact = () => {
             Mail To Me 
           </Typography>
 
-          {/* Name Input */}
           <TextField
             variant="outlined"
             label="Your Name"
@@ -201,7 +198,6 @@ const Contact = () => {
             }}
           />
 
-          {/* Email Input */}
           <TextField
             variant="outlined"
             label="Your Email"
@@ -221,7 +217,6 @@ const Contact = () => {
             }}
           />
 
-          {/* Message Input */}
           <TextField
             variant="outlined"
             label="Your Message"
@@ -243,7 +238,6 @@ const Contact = () => {
             }}
           />
 
-          {/* Send Button */}
           <Button
             variant="contained"
             endIcon={<SendIcon />}

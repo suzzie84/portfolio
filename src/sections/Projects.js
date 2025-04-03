@@ -128,7 +128,7 @@ const Projects = () => {
                 <Typography 
                   variant="h6" 
                   fontWeight="bold" 
-                  sx={{ fontSize: "1.3rem", color: "#FFA500" }} // Orange title color
+                  sx={{ fontSize: "1.3rem", color: "#FFA500" }} 
                 >
                   {project.title}
                 </Typography>

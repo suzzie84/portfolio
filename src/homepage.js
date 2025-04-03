@@ -18,7 +18,6 @@ const HomePage = () => {
         paddingLeft: { xs: 2, md: 10 },
       }}
     >
-      {/* Left Section (Animated Info) */}
       <motion.div
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
@@ -30,19 +29,7 @@ const HomePage = () => {
           fontWeight="bold"
           sx={{ color: "white", letterSpacing: '2px',margin:"0px" }}
         >
-          <b>Hello, I’m</b> <b style={{
-            fontWeight: "bold",
-            textTransform: "uppercase",
-            letterSpacing: 4,
-            position: "relative",
-            color: "transparent",
-            WebkitTextStroke: "2px #FFA500", // Outline effect
-            textShadow: "0px 0px 10px rgba(255, 165, 0, 0.8)", // Glowing effect
-            animation: "glow 2s infinite alternate",
-            "@keyframes glow": {
-              "0%": { textShadow: "0px 0px 5px rgba(255, 165, 0, 0.5)" },
-              "100%": { textShadow: "0px 0px 20px rgba(255, 165, 0, 1)" },
-            },}}>Susmitha Baira</b>
+          <b>Hello, I’m</b> <b style={{color:"#FFA500"}}>Susmitha Baira</b>
         </Typography>
 
         <motion.div

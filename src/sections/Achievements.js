@@ -21,7 +21,6 @@ const Achievements = () => {
     arrows: false,
   };
 
-  // State to track if section is in view
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
 
@@ -32,11 +31,11 @@ const Achievements = () => {
           if (entry.isIntersecting) {
             setIsVisible(true);
           } else {
-            setIsVisible(false); // Reset animation when out of view
+            setIsVisible(false); 
           }
         });
       },
-      { threshold: 0.2 } // Trigger when 30% of the section is visible
+      { threshold: 0.2 }
     );
 
     if (sectionRef.current) {
@@ -62,10 +61,9 @@ const Achievements = () => {
         alignItems: "center",
         background: `linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0.3)), url(${home_bg}) center center fixed`,
         backgroundSize: "cover",
-        padding: "50px 30px",
+        padding: "50px 10px",
       }}
     >
-      {/* Section Title with Slide-Up Animation */}
       <Typography
         variant="h4"
         sx={{
@@ -76,7 +74,7 @@ const Achievements = () => {
           letterSpacing: 2,
           fontSize: "2.5rem",
           opacity: isVisible ? 1 : 0,
-          transform: isVisible ? "translateY(0)" : "translateY(50px)", // Slide up from bottom
+          transform: isVisible ? "translateY(0)" : "translateY(50px)", 
           transition: "opacity 0.8s ease-out, transform 0.8s ease-out",
         }}
       >
@@ -88,7 +86,7 @@ const Achievements = () => {
         sx={{
           display: "flex",
           flexDirection: { xs: "column", md: "row" },
-          padding: "50px 30px",
+          padding: "50px 10px",
           borderRadius: "20px",
           bgcolor: "rgba(255, 255, 255, 0.1)",
           backdropFilter: "blur(10px)",
@@ -96,12 +94,11 @@ const Achievements = () => {
           color: "#fff",
           alignItems: "center",
           opacity: isVisible ? 1 : 0,
-          transform: isVisible ? "translateY(0)" : "translateY(50px)", // Slide up from bottom
+          transform: isVisible ? "translateY(0)" : "translateY(50px)", 
           transition: "opacity 0.8s ease-out, transform 0.8s ease-out",
         }}
       >
-        {/* Left: Image Slider */}
-        <Box sx={{ width: { xs: "100%", md: "45%" }, paddingRight: { md: "20px" } }}>
+        <Box sx={{ width: { xs: "100%", md: "45%" }, paddingRight: { md: "20px",xs:"8px" } }}>
           <Slider {...settings}>
             {images.map((img, index) => (
               <Box key={index} sx={{ display: "flex", justifyContent: "center" }}>
@@ -121,9 +118,8 @@ const Achievements = () => {
           </Slider>
         </Box>
 
-        {/* Right: Text Content */}
         <Box sx={{ width: { xs: "100%", md: "55%" }, textAlign: "left" }}>
-          <Typography variant="h4" sx={{ fontWeight: "bold", mb: 2, color: "#FFA500", letterSpacing: 1 }}>
+          <Typography variant="h4" sx={{paddingTop:"20px", fontWeight: "bold", mb: 2, color: "#FFA500", letterSpacing: 1 }}>
             🏆 National Means-cum-Merit Scholarship (NMMS)
           </Typography>
 
